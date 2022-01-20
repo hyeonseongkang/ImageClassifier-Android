@@ -29,11 +29,24 @@ android {
 }
 
 dependencies {
-
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'org.tensorflow:tensorflow-lite:2.4.0'
+    implementation 'org.tensorflow:tensorflow-lite-support:0.1.0'
 }
+
+/*
+tensorflow-lite-support -> 5개 패키지로 이루어져있음.
+
+1. common - 파일 읽기, 공통 인터페이스 등 공통 기능
+2. image - 이미지 변환, 전처리, 저장 등
+3. label - 레이블 관리, 매핑 등
+4. model - 모델 객체화, GPU 위임 등
+5. tensorbuffer - ByteBuffer 관리
+
+ */
